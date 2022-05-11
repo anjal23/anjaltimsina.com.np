@@ -481,4 +481,34 @@ h3{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+.contact-col button{
+    width: 100%;
+    border-radius: 100px;
+}
+.contact-col h4{
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    animation: h4 3s ease forwards;
+}
+@keyframes h4{
+    0%{
+        opacity: 1;
+        pointer-events: all;  
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 
