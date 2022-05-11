@@ -1,11 +1,8 @@
-
-//get the form elements defined in your form HTML abouve
-
 var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
       event.preventDefault();
-      var status = document.getElementById("my-form-status");
+      var status = document.getElementById("status");
       var data = new FormData(event.target);
       fetch(event.target.action, {
         method: form.method,
@@ -16,13 +13,16 @@ var form = document.getElementById("my-form");
       }).then(response => {
         if (response.ok) {
           status.innerHTML = "Thanks for your submission!";
-          form.reset()
+          form.reset();
+          status.classList.add('success');
+
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
               status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
             } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
+              status.classList.add('error');
+              status.innerHTML = "Oops! There was a problem submitting your form";
             }
           })
         }
