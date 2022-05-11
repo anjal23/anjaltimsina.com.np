@@ -1,8 +1,8 @@
 <?php
-$name = $_POST['name']
-$visitor_email = $_POST['email']
-$subject = $_POST['subject']
-$message = $_POST['message']
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
 $email_from = 'anjaltimsina.com.np';
 $email_subject = 'New Form Submission';
@@ -15,5 +15,5 @@ $headers= "From: $email_from \r\n";
 $headers . = "Reply-To: $visitor_email \r\n";
 
 mail($to,$email_subject,$email_body,$headers);
-header("Location: contact.html")
+header("Location: contact.html");
 ?>
