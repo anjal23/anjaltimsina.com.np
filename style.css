@@ -485,18 +485,30 @@ h3{
     width: 100%;
     border-radius: 100px;
 }
-.contact-col h4{
+#status.success{
+    text-align: center;
     width: 70%;
     margin: 20px auto;
-    text-align: center;
     border: 1px solid green;
     padding: 10px;
     border-radius: 30px;
     background-color: green;
     color: white;
-    animation: h4 3s ease forwards;
+    animation: status 3s ease forwards;
+} 
+#status.error{
+    text-align: center;
+    width: 70%;
+    margin: 20px auto;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: orangered;
+    color: white;
+    animation: status 3s ease forwards;
 }
-@keyframes h4{
+
+@keyframes status{
     0%{
         opacity: 1;
         pointer-events: all;  
@@ -510,5 +522,6 @@ h3{
         pointer-events: none;
     }
 }
+
 
 
