@@ -75,21 +75,24 @@
                 <script>
                     function sendEmail(){
                         Email.send({
-                            SecureToken: "63f10870-af1e-4935-a22d-2ecbb749d635",
-                            To : 'anjaltimsina23@gmail.com',
-                            from: document.getElementById("email").value,
-                            subject : "New Contact Form Enquiry",
+                            Host : "smtp.elasticemail.com",
+                            Username : "anjaltimsina23@gmail.com",
+                            Password : "003DA7A2E8D118D45B453B3EEF7C7FDD4194",
+                            To : 'anjaltimsian@gmail.com',
+                            From : document.getElementById("email").value,
+                            Subject : "New Contact Form Enquiry",
                             Body: "Name: " + document.getElementById("name").value
                                     + "<br> Email: "+ document.getElementById("email").value
                                     + "<br> Subject: "+ document.getElementById("subject").value
                                     + "<br> Message: "+ document.getElementById("message").value
                         }).then(
-                            message => alert("Message Sent Successfully")
+                        message => alert("Message Sent Successfully")
                         );
                     }
                 </script>
             </div>
         </section>
+    
     <!------------- FOOTER ------------>
 
     <section class="footer">
