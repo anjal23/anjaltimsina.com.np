@@ -63,7 +63,7 @@
                 <!-------- CONTACT FORM ---------------->
 
                 <div class="contact-col">
-                    <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                    <form action="https://formspree.io/f/xwkyalwn" method="POST" id="my-form">
                         <input type="text" name="name" placeholder="Enter your name" required>
                         <input type="email" name="email" placeholder="Enter your email" required>
                         <input type="text" name="subject" placeholder="Enter your subject" required>
@@ -71,26 +71,7 @@
                         <button type="submit" class="hero-btn red-btn">Send message</button>
                     </form>
                 </div>
-                <script src="https://smtpjs.com/v3/smtp.js"></script>
-                <script>
-                    function sendEmail(){
-                        Email.send({
-                            Host : "smtp.elasticemail.com",
-                            Username : "anjaltimsina23@gmail.com",
-                            Password : "003DA7A2E8D118D45B453B3EEF7C7FDD4194",
-                            To : 'anjaltimsian@gmail.com',
-                            From : document.getElementById("email").value,
-                            Subject : "New Contact Form Enquiry",
-                            Body: "Name: " + document.getElementById("name").value
-                                    + "<br> Email: "+ document.getElementById("email").value
-                                    + "<br> Subject: "+ document.getElementById("subject").value
-                                    + "<br> Message: "+ document.getElementById("message").value
-                        }).then(
-                        message => alert("Message Sent Successfully")
-                        );
-                    }
-                </script>
-            </div>
+                <script src="main.js"></script>
         </section>
     
     <!------------- FOOTER ------------>
